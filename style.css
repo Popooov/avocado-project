@@ -1,0 +1,428 @@
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('fonts/static/RobotoMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('fonts/static/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('fonts/static/RobotoMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 1440px;
+    background-color: #e1f7ab;
+    margin: 0 auto;
+}
+
+svg, img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.container {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: 8px;
+}
+
+h1, p, .about-p, ul, footer {
+    font-family: 'RobotoMono';
+}
+
+.logo .name {
+    display: none;
+    margin-left: 25px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25), 0 0 5px rgba(0, 0, 0, 0.25), 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 5px;
+}
+
+.logo svg {
+    width: 38px;
+    cursor: pointer;
+}
+
+.funny-logo {
+    transform: none;
+    transition: all ease-in-out 300ms;
+}
+
+.funny-logo:hover {
+    transform: rotate(90deg);
+}
+
+.open {
+    cursor: pointer;
+    width: 42px;
+  }
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    padding-top: 5em;
+    list-style: none;
+    display: none;
+    place-content: start center;
+    z-index: 1;
+}
+
+.nav li {
+    padding: 1.5em;
+}
+
+nav li a {
+    font-size: 1.75rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: #e1f7ab;
+}
+
+.exit {
+    width: 42px;
+    position: absolute;
+    top: 5px;
+    right: 9px;
+    cursor: pointer;
+    z-index: 2;
+    color: #e1f7ab;
+}
+  
+.open-nav {
+    display: grid;
+}
+
+.main-index, .main-nutrients, .main-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline-start: 4px;
+    margin-block-end: 2em;
+}
+
+.main-nutrients {
+    margin-block-start: 2.75em;
+}
+
+.main-about {
+    margin-inline-start: 4px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-block-end: 1em;
+    line-height: 1em;
+}
+
+.p-main {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.015em;
+}
+
+.rows {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-block-end: 1.15em;
+}
+
+.row:last-child {
+    margin-block-end: 0;
+}
+
+.first {
+    margin-inline-start: .36em;
+}
+
+.second {
+    margin-inline-start: 1em;
+}
+
+.p-about {
+    font-size: 1.15rem;
+    margin-block-end: 1.25em;
+    margin-inline-end: .5em;
+}
+
+.avocado-img {
+    position: fixed;
+    min-width: 120%;
+    top: 50%;
+    left: 105%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    z-index: -1;
+}
+
+.funny-filter-small {
+    filter: blur(1.25px);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 4px;
+}
+
+.daw a {
+    border: 1px solid black;
+    padding-inline: .35em;
+    border-radius: 3px;
+}
+
+.daw a:hover {
+    background-color: black;
+    color: #e1f7ab;
+}
+
+.p-footer {
+    font-size: 1.15rem;
+}
+
+@media (width >= 600px) {
+
+    .container {
+        padding: 10px 30px;
+    }
+    
+    .logo svg {
+        width: 42px;
+    }
+    
+    .open, .nav li:first-child {
+        display: none;
+    }
+    
+    .nav {
+        position: unset;
+        top: unset;
+        right: unset;
+        background: inherit;
+        color: black;
+        height: unset;
+        width: unset;
+        padding-top: unset;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav li {
+        font-size: 1.75rem;
+        font-weight: 300;
+        padding: unset;
+        margin-inline-end: 1em;
+        letter-spacing: 4px;
+    }
+
+    nav li a {
+        color: initial;
+        font-weight: unset;
+    }
+
+    .link-home a, 
+    .link-nutrients a, 
+    .link-about a {
+        font-weight: 500;
+    }
+
+    .nav li:last-child {
+        margin-inline-end: 0;
+    }
+
+    .mani-index {
+        margin-block-end: 0;
+    }
+
+    h1 {
+        font-size: 5rem;
+        font-weight: 300;
+        margin-block-end: .75em;
+        line-height: 1em;
+    }
+    
+    .p-main {
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 1.25em;
+    }
+
+    .rows {
+        font-size: 2.5rem;
+    }
+
+    .about-column {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+
+    .p-about {
+        font-size: 1.25rem;
+        margin-block-end: 1em;
+    }
+
+    .avocado-img-home, 
+    .avocado-img-nutrients,
+    .avocado-img-about {
+        position: initial;
+        min-width: 61.2%;
+        margin-inline-start: 4.5em;
+        margin-block-start: 1.25em;
+        top: unset;
+        left: unset;
+        transform: rotate(-90deg);
+        z-index: 0;
+    }
+
+    .avocado-img-nutrients {
+        min-width: 60%;
+        margin-block-start: -2em;
+        margin-inline-start: 6.95em;
+    }
+
+    .avocado-img-about {
+        min-width: 62.5%;
+        margin-inline-start: 0;
+        margin-block-start: 0;
+    }
+
+    .funny-filter-small {
+        filter: blur(0);
+    }
+}
+
+@media (width >= 1000px) {
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo .name {
+        display: block;
+        font-size: 2.25rem;
+    }
+
+    nav li {
+        position: relative;
+    }
+    
+    nav a::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 0%;
+        background-color: black;
+        position: absolute;
+    
+        transition: all ease-in-out 300ms;
+    }
+    
+    nav a:hover::after {
+        width: 100%;
+    }
+
+    .main-index, 
+    .main-nutrients, 
+    .main-about {
+        margin-inline-start: 0;
+        margin-block-end: 0;
+        margin-block-start: 0;
+    }
+
+    .main-index .index-column {
+        width: 800px;
+        flex-shrink: 0;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    .main-nutrients p {
+        font-size: 4rem;
+    }
+
+    .nutrients-column {
+        margin-inline-start: .25em;
+        margin-inline-end: 19.3em;
+    }
+
+    .p-about {
+        width: 690px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 40px;
+    }
+
+    .avocado-img {
+        min-width: initial;
+        transform: none;
+        margin-block-start: 0;
+    }
+
+    .avocado-img-home {
+        margin-inline-start: 0;
+        padding-inline-start: 2em;
+    }
+
+    .avocado-img-about {
+        margin-inline-start: 8.25em;
+    }
+
+    .funny-filter {
+        filter: invert(0%);
+        transition: all ease-in-out 300ms;
+    }
+    
+    .funny-filter:hover {
+        filter: invert(100%);
+    }
+
+    .p-footer {
+        font-size: 1.75rem;
+        font-weight: 300;
+    }
+}
